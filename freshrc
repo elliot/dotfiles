@@ -20,3 +20,8 @@ fresh-options --file=~/.gitignore --marker=#
 fresh-options
 
 # Vim
+fresh-options --file=~/.vimrc --marker=\"
+  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh vim/vundle.vim
+  fresh twe4ked/dotfiles vim/vundle_after.vim
+fresh-options
