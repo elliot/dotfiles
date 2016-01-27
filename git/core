@@ -1,0 +1,22 @@
+[core]
+  editor = vim
+  quotepath = false
+
+[branch]
+  autosetuprebase = always
+
+[push]
+  default = current
+
+[diff]
+  algorithm = patience
+
+[difftool]
+  prompt = false
+
+[merge]
+  tool = opendiff
+
+[mergetool]
+  keepBackup = false
+  prompt = false

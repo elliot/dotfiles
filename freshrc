@@ -1,9 +1,16 @@
 # vim: set ft=sh:
 
+# Fresh
+fresh freshshell/fresh bin/fresh --bin
+
+
 # Git
 fresh-options --file=~/.gitconfig --marker --ignore-missing
+  fresh git/core
   fresh git/alias
   fresh git/credential
+  fresh git/colour
+  fresh git/filter
 fresh-options
 
 # Gitignore
@@ -11,3 +18,5 @@ fresh-options --file=~/.gitignore --marker=#
   fresh github/gitignore Global/OSX.gitignore
   fresh github/gitignore Global/Vim.gitignore
 fresh-options
+
+# Vim
