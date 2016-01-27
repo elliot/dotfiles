@@ -1,0 +1,6 @@
+
+# Git
+fresh-options --file=~/.gitconfig --marker --ignore-missing
+  fresh git/alias
+  fresh git/credential
+fresh-options
