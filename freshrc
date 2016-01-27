@@ -25,3 +25,14 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/vundle.vim
   fresh twe4ked/dotfiles vim/vundle_after.vim
 fresh-options
+
+if [ ! -e ~/.gitconfig.local ]; then
+    echo "Configuring local Git settings:"
+
+    read -p "    Enter Git Name: " name
+    git config -f ~/.gitconfig.local user.name "$name"
+    read -p "    Enter Git Email: " email
+    git config -f ~/.gitconfig.local user.email "$email"
+
+    echo "Configured git settings in ~/.gitconfig.local. Not stored in local .dotfiles repo."
+fi

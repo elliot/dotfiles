@@ -2,6 +2,9 @@
   editor = vim
   quotepath = false
 
+[include]
+  path = .gitconfig.local
+
 [branch]
   autosetuprebase = always
 
