@@ -11,6 +11,7 @@ go
 httpie
 hub
 jq
+mysql
 nvm
 parallel
 pssh
