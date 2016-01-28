@@ -8,6 +8,8 @@
   cob     = checkout -b
   cont    = rebase --continue
   cp      = cherry-pick
+  di      = diff
+  dc      = diff --cached
   l       = log
   ld      = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   lg      = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
