@@ -23,3 +23,6 @@
 [mergetool]
   keepBackup = false
   prompt = false
+
+[rebase]
+  autosquash = true
