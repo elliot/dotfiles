@@ -1,4 +1,5 @@
 [alias]
+  ap      = add --patch
   abort   = rebase --abort
   amend   = commit -a --amend
   bclean  = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"

@@ -28,10 +28,14 @@ fresh Lokaltog/powerline font/10-powerline-symbols.conf --file=~/.config/fontcon
 # Git
 fresh-options --file=~/.gitconfig --marker --ignore-missing
   fresh git/core
-  fresh git/alias
   fresh git/credential
   fresh git/colour
   fresh git/filter
+
+  fresh git/alias
+  fresh JonathonMA/dotfiles git/aliases/branch-master.gitconfig
+  fresh JonathonMA/dotfiles git/aliases/since-master.gitconfig
+  fresh JonathonMA/dotfiles git/aliases/autofix.gitconfig
 fresh-options
 
 # Gitignore
