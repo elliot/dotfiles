@@ -6,6 +6,7 @@
   c       = commit -av
   cm      = !git add -A && git commit -m
   co      = checkout
+  com     = commit -m
   cob     = checkout -b
   cont    = rebase --continue
   cp      = cherry-pick
