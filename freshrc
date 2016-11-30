@@ -31,6 +31,7 @@ fresh-options --file=~/.gitconfig --marker --ignore-missing
   fresh git/credential
   fresh git/colour
   fresh git/filter
+  fresh git/diff
 
   fresh git/alias
   fresh JonathonMA/dotfiles git/aliases/branch-master.gitconfig
