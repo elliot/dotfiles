@@ -41,7 +41,7 @@ fresh-options
 
 # Gitignore
 fresh-options --file=~/.gitignore --marker=#
-  fresh github/gitignore Global/OSX.gitignore
+  fresh github/gitignore Global/macOS.gitignore
   fresh github/gitignore Global/Vim.gitignore
 fresh-options
 
