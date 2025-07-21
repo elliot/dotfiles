@@ -1,25 +1,30 @@
 [alias]
-  ap      = add --patch
-  abort   = rebase --abort
-  amend   = commit -a --amend
-  bclean  = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
-  c       = commit -av
-  cm      = !git add -A && git commit -m
-  co      = checkout
-  com     = commit -m
-  cob     = checkout -b
-  cont    = rebase --continue
-  cp      = cherry-pick
-  di      = diff
-  dc      = diff --cached
-  fixup   = "!f() { git commit --fixup=$1 ${@:2} && git rebase -i --autosquash $1^; }; f"
-  l       = log
-  ld      = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-  lg      = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  nuke    = reset --hard
-  pub     = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
-  pr      = pull-request -o
-  s       = status
-  ss      = status -s
-  undo    = reset HEAD~1 --mixed
-  yolo    = push --force
+  abort       = rebase --abort
+  amend       = commit -a --amend
+  ap          = add --patch
+  bclean      = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  c           = commit -av
+  cm          = !git add -A && git commit -m
+  co          = checkout
+  cob         = checkout -b
+  com         = commit -m
+  cont        = rebase --continue
+  cp          = cherry-pick
+  dc          = diff --cached
+  di          = diff
+  fixup       = "!f() { git commit --fixup=$1 ${@:2} && git rebase -i --autosquash $1^; }; f"
+  l           = log
+  ld          = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  lg          = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  main        = "!f(){ git checkout $(git main-branch) $@;}; f"
+  main-branch = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+  nuke        = reset --hard
+  pr          = pull-request -o
+  pub         = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  rebasem     = "!f(){ git rebase -i --autosquash origin/$(git main-branch) --no-verify $@;}; f"
+  remotesh    = remote set-head origin --auto
+  s           = status
+  ss          = status -s
+  undo        = reset HEAD~1 --mixed
+  upm         = "!f(){ git pull --rebase --autostash origin $(git main-branch) $@;}; f"
+  yolo        = push --force
